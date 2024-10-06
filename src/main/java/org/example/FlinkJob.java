@@ -1,6 +1,6 @@
 package org.example;
 
-// test cicd
+// test cicd1
 
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
