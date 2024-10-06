@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                // Lấy mã nguồn từ repository
-                git 'https://github.com/your-username/your-repo.git' // Thay đổi URL thành repository của bạn
-            }
-        }
         stage('Build') {
             steps {
                 echo 'Building the project...'
