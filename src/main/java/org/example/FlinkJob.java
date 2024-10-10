@@ -1,7 +1,5 @@
 package org.example;
 
-// test cicd1
-
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
@@ -15,12 +13,14 @@ import java.util.Properties;
 public class FlinkJob {
     public static void main(String[] args) throws Exception {
         // Tạo môi trường thực thi
+        System.out.println("hihihihi");
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         // Thiết lập cấu hình Kafka
         Properties properties = new Properties();
         properties.setProperty("bootstrap.servers", "10.10.12.180:9092");
         properties.setProperty("group.id", "test"); // Đặt group id cho consumer
+        // properties.setProperty("auto.offset.reset", "earliest");
 
         // Tạo một FlinkKafkaConsumer
         FlinkKafkaConsumer<String> kafkaConsumer = new FlinkKafkaConsumer<>(
